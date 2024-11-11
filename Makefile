@@ -4,21 +4,22 @@ SRCS := ft_isalnum.c
 
 OBJS := $(SRCS:.c=.o)
 
-AR: ar
-ARFLAGS: -rcs
+AR := ar
+ARFLAGS := rcs
 
-CC := CC
+CC := gcc
 CFLAGS := -Wall -Werror -Wextra
 
 all: $(NAME)
 
-%.o %.c:
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $(OBJS) -o $(NAME)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
-clean: rm -f $(OBJS)
+clean:
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)	
