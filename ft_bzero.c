@@ -6,18 +6,22 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:48:47 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/11 11:48:54 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/15 02:37:20 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_bzero(void *s, size_t n)
+#include <libft.h>
+
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *ptr = (unsigned char *) s;
-    size_t i;
-    i = 0;
-    while (i<n)
-    {
-        ptr[i]='\0';
-        i++;
-    }
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char *) s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = '\0';
+		i++;
+	}
 }

@@ -6,15 +6,17 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:29:22 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/18 13:26:50 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/19 14:31:09 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-t_list	*ft_last(t_list **lst, t_list *new)
+t_list	*ft_lstlast(t_list *lst)
 {
-	while (*lst)
-		*lst = *lst->next;
-	return (*lst->content);
+	if (!lst)
+		return (NULL);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }

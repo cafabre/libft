@@ -6,7 +6,7 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:30:25 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/18 13:43:47 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/19 15:17:35 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	(*del)(lst);
+	if ((!lst) || (!del))
+		return ;
+	(*del)(lst->content);
 	free(lst);
 }

@@ -6,7 +6,7 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:44:52 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/18 13:46:07 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/19 14:37:48 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
+	if (!f)
+		return ;
 	while (lst)
+	{
 		(*f)(lst->content);
+		lst = lst->next;
+	}
 }

@@ -6,12 +6,13 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:39:08 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/11 11:39:18 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/15 02:49:40 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
-{
-    return (0<=c && c<=128);
-}
+#include <libft.h>
 
+int	ft_isascii(int c)
+{
+	return (0 <= c && c <= 127);
+}

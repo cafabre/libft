@@ -6,11 +6,13 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:42:35 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/11 11:42:44 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/15 01:57:34 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include <libft.h>
+
+int	ft_isprint(int c)
 {
-    return (32<=c && c<=126);
+	return (32 <= c && c <= 126);
 }

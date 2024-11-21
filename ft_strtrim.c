@@ -6,13 +6,13 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:26:06 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/14 14:55:15 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/15 03:15:09 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <libft.h>
 
-int	ft_strlen(char const *s)
+static int	ft_const_strlen(char const *s)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char const *s)
 	return (i);
 }
 
-int	is_in_set(char c, char const *set)
+static int	is_in_set(char c, char const *set)
 {
 	int	i;
 
@@ -44,20 +44,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*res;
 
 	start = 0;
-	end = ft_strlen(s1);
+	end = ft_const_strlen(s1) - 1;
 	i = 0;
 	res = NULL;
-	while (is_in_set(s1[start], set))
+	while (s1[start] && is_in_set(s1[start], set))
 		start++;
-	while (is_in_set(s1[end], set))
+	while (end > start && is_in_set(s1[end], set))
 		end--;
-	res = malloc((end - start) * sizeof(char));
+	res = malloc((end - start + 2) * sizeof(char));
 	if (res == NULL)
 		return (res);
-	while (i < (end - start))
+	while (i <= (end - start))
 	{
 		res[i] = s1[start + i];
 		i++;
 	}
+	res[i] = '\0';
 	return (res);
 }

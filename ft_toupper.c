@@ -6,14 +6,15 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:50:41 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/11 11:51:26 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/15 02:03:45 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
-{
-    if (97<=c && c<=122)
-        c-=32;
-    return(c);
-}
+#include <libft.h>
 
+int	ft_toupper(int c)
+{
+	if (97 <= c && c <= 122)
+		c -= 32;
+	return (c);
+}

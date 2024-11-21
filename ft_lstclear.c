@@ -6,7 +6,7 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 13:36:27 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/18 13:44:38 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/19 19:53:27 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,16 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	while (lst)
+	t_list	*tmp;
+
+	if (!lst || !del)
+		return ;
+	while (*lst)
 	{
-		(*del)(*lst);
+		tmp = (*lst)->next;
+		(*del)((*lst)->content);
 		free(*lst);
-		lst = lst->next;
+		*lst = tmp;
 	}
+	*lst = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: cafabre <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:12:38 by cafabre           #+#    #+#             */
-/*   Updated: 2024/11/18 12:26:35 by cafabre          ###   ########.fr       */
+/*   Updated: 2024/11/19 15:15:58 by cafabre          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if ((!lst) || (!new))
+		return ;
 	new->next = *lst;
-	return ;
+	*lst = new;
 }
