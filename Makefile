@@ -34,7 +34,7 @@ STR_FILES   = ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \
 # Memory files
 MEM_DIR     = memory/
 MEM_FILES   = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
-              ft_memchr.c ft_memcmp.c ft_calloc.c
+              ft_memchr.c ft_memcmp.c ft_calloc.c ft_nullfree.c
 
 # Numbers files
 NUM_DIR     = numbers/
