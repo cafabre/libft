@@ -7,7 +7,7 @@ NAME        = libft.a
 #                                 CONFIG & FLAGS                               #
 # **************************************************************************** #
 CC          = cc
-CFLAGS      = -Wall -Wextra -Werror -I. -MMD
+CFLAGS      = -Wall -Wextra -Werror -I. -Iheaders -MMD
 AR          = ar rcs
 RM          = rm -rf
 
@@ -56,13 +56,18 @@ LST_FILES   = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
               ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
               ft_lstmap.c
 
+# Get_next_line files
+GNL_DIR     = gnl/
+GNL_FILES   = get_next_line.c get_next_line_utils.c
+
 # Combining all sources with their respective prefixes
 SRC_FILES   = $(addprefix $(CHAR_DIR), $(CHAR_FILES)) \
               $(addprefix $(STR_DIR), $(STR_FILES)) \
               $(addprefix $(MEM_DIR), $(MEM_FILES)) \
               $(addprefix $(NUM_DIR), $(NUM_FILES)) \
               $(addprefix $(OUT_DIR), $(OUT_FILES)) \
-              $(addprefix $(PFX_DIR), $(PFX_FILES))
+              $(addprefix $(PFX_DIR), $(PFX_FILES)) \
+              $(addprefix $(GNL_DIR), $(GNL_FILES))
 
 BONUS_FILES = $(addprefix $(LST_DIR), $(LST_FILES))
 
