@@ -66,6 +66,7 @@ The library includes a custom version of the `printf` function, capable of handl
 | `ft_isalnum` | Checks for an alphanumeric character. |
 | `ft_isalpha` | Checks for an alphabetic character. |
 | `ft_isascii` | Checks if character fits into the ASCII set. |
+| `ft_isblank` | Checks if a character is a blank character (space or tab). |
 | `ft_isdigit` | Checks for a digit (0 through 9). |
 | `ft_isprint` | Checks for any printable character. |
 | `ft_isspace` | Checks for white-space characters (space, tab, etc.). |
@@ -78,6 +79,7 @@ The library includes a custom version of the `printf` function, capable of handl
 | `ft_bzero` | Erases the data in the n bytes of the memory by writing zeros. |
 | `ft_calloc` | Allocates memory and initializes all bytes to zero. |
 | `ft_memchr` | Scans memory for the first occurrence of a specific character. |
+| `ft_free_sptr` | Frees all strings in a NULL-terminated array and then frees the array itself. |
 | `ft_memcmp` | Compares two memory areas byte by byte. |
 | `ft_memcpy` | Copies memory area from source to destination. |
 | `ft_memmove` | Copies memory area with safety for overlapping regions. |
