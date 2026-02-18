@@ -38,7 +38,7 @@ MEM_FILES   = ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 
 # Numbers files
 NUM_DIR     = numbers/
-NUM_FILES   = ft_atoi.c ft_atof.c ft_itoa.c ft_utoa.c
+NUM_FILES   = ft_atoi.c ft_atof.c ft_itoa.c ft_utoa.c ft_isnumber.c
 
 # Output files
 OUT_DIR     = output/

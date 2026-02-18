@@ -79,6 +79,7 @@ int		ft_atoi(const char *str);
 double	ft_atof(const char *nptr);
 char	*ft_itoa(int n);
 char	*ft_utoa(unsigned int nbr);
+bool	ft_isnumber(char *s);
 
 /* ************************************************************************** */
 /* 									OUTPUT                                    */
