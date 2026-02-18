@@ -81,7 +81,7 @@ static char	*update_store(char *store)
 	return (new_store);
 }
 
-char	*get_next_line(int fd)
+char	*ft_get_next_line(int fd)
 {
 	static char	*store;
 	char		*line;

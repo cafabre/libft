@@ -8,7 +8,7 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char	*get_next_line(int fd);
+char	*ft_get_next_line(int fd);
 char	*join_and_free(char *store, char *buffer);
 void	copy_remaining(char *new_store, char *store, int i);
 
