@@ -29,7 +29,7 @@ STR_DIR     = string/
 STR_FILES   = ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \
               ft_strrchr.c ft_strncmp.c ft_strcmp.c ft_strnstr.c \
               ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c \
-              ft_split.c ft_strmapi.c ft_striteri.c
+              ft_split.c ft_strmapi.c ft_striteri.c ft_tablen.c
 
 # Memory files
 MEM_DIR     = memory/

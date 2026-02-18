@@ -82,6 +82,7 @@ The library includes a custom version of the `printf` function, capable of handl
 | `ft_memcpy` | Copies memory area from source to destination. |
 | `ft_memmove` | Copies memory area with safety for overlapping regions. |
 | `ft_memset` | Fills memory with a constant byte. |
+| `ft_nullfree` | Frees the memory pointed to by a pointer and sets it to NULL to avoid dangling pointers. |
 
 ### 🔹 String Manipulation
 | Function | Description |
@@ -101,6 +102,7 @@ The library includes a custom version of the `printf` function, capable of handl
 | `ft_strrchr` | Locates the last occurrence of a character in a string. |
 | `ft_strtrim` | Trims specific characters from the start and end of a string. |
 | `ft_substr` | Extracts a specific portion (substring) from a string. |
+| `ft_tablen` | Returns the number of strings in a NULL-terminated array of strings. |
 
 ### 🔹 Number Conversions
 | Function | Description |
